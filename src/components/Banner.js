@@ -20,12 +20,13 @@ function Banner() {
             </div>
 
             <div className="banner__info">
-                <h1>Get out and streach your imagination</h1>
-                <h5>
-                    Plan a different find of gateway to uncover the hidden gems near you.
-                </h5>
+                <h1>Thinking about your pets during the vacation?</h1>
+                <h3>
+                    Dont' worry we are here.
+                </h3>
+                <br/>
                 <Button onClick={() => history('/Search')}
-                    variant="outlined">Explore Nearby</Button>
+                    variant="outlined">Explore Nearby Hosts</Button>
             </div>
         </div>
     )

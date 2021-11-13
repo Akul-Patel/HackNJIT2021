@@ -32,7 +32,7 @@ function Home() {
                     src="https://media.nomadicmatt.com/2019/airbnb_breakup3.jpg"
                     title="3 Bedroom Flat"
                     description="Superhost with a stunning view of the beachside in Sunny Bournemouth"
-                    price="₹10000/night"
+                    price="$30/night"
                 />
                 <Card
                     src="https://thespaces.com/wp-content/uploads/2017/08/Courtesy-of-Airbnb.jpg"
