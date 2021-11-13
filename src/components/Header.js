@@ -5,10 +5,12 @@ import LanguageIcon from '@material-ui/icons/Language';
 // import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Avatar, Button } from '@material-ui/core';
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 import AuthNav from './auth-nav';
 
 
 function Header() {
+    const history = useNavigate();
     return (
         <div className="header">
             <Link to='/'>
@@ -17,7 +19,8 @@ function Header() {
 
             <div className="header__center">
                 <input type="text" />
-                <SearchIcon />
+                <Button onClick={() => history('/Search')}
+                    ><SearchIcon /></Button>
             </div>
 
             <div className="header__right">
