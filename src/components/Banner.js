@@ -5,7 +5,6 @@ import Search from './Search';
 import { useNavigate } from 'react-router-dom';
 
 function Banner() {
-
     const history = useNavigate();
     const [showSearch, setShowSearch] = useState(false);
 
@@ -25,8 +24,8 @@ function Banner() {
                 <h5>
                     Plan a different find of gateway to uncover the hidden gems near you.
                 </h5>
-                <Button onClick={() => history.push('/search')}
-                    variant='outlined'>Explore Nearby</Button>
+                <Button onClick={() => history('/Search')}
+                    variant="outlined">Explore Nearby</Button>
             </div>
         </div>
     )
