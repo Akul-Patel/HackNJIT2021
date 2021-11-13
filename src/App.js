@@ -1,23 +1,31 @@
 
+import React from 'react';
 import './App.css';
-import { useState , useEffect } from "react";
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Home from './components/Home';
+import SearchPage from './components/SearchPage';
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+
 
 function App() {
-  const [deathToday, setDeathToday] = useState(null)
-  useEffect(() => {
-    fetch('/data')
-      .then(response => response.json())
-      .then(response => {
-        setDeathToday(response[1])
-        
-      })
-      .catch(error => {
-        console.log(error.message)
-      })
-  }, [])
   return (
-    <div>
-      <p>{deathToday}</p>
+    <div className="app">
+      <Router>
+        <Header />
+
+        <Routes>
+          <Route path="/search" element={<SearchPage/>}>
+            
+          </Route>
+          <Route path="/" element={<Home/>}>
+            
+          </Route>
+
+        </Routes>
+        <Footer />
+      </Router>
     </div>
   );
 }
