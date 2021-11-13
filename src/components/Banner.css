@@ -1,18 +1,17 @@
 .banner {
-    background: url("https://news.airbnb.com/wp-content/uploads/sites/4/2018/03/accessible-header-wide-min.jpg") center center;
+    /* background: url("Home-main.jpg") center center;
     height: 60vh;
-    position: relative;
+    position: flex; */
 }
 
 
 .banner__info{
     background-color: black;
     color: white;
-    padding-top: 25vh;
-    padding-bottom: 70px;
-    padding-left: 50px;
-    padding-right: 50px;
-    width: 300px;
+    padding-top: 10vh;
+    /* padding-bottom: 70px; */
+    height: 40vh;
+    text-align: center;
 }
 
 .banner__search {
@@ -24,20 +23,20 @@
     background-color: white !important;
     font-weight: 900 !important;
     text-transform: inherit !important;
-    color: #ff7779 !important;
+    color: #446cb4 !important;
 }
 
 .banner__info > button {
-    background-color: #ff7779;
+    background-color: #446cb4;
     color: white;
     text-transform: inherit;
-    margin-top: 20px;
+    /* margin-top: 5px; */
     font-weight: 600;
 }
 
 .banner__info > button:hover {
     background-color: white;
-    color: #ff7779
+    color: #446cb4
 }
 
 .banner__info > h5 {

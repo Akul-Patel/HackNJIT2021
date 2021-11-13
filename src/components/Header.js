@@ -2,30 +2,28 @@ import React from 'react'
 import './Header.css'
 import SearchIcon from '@material-ui/icons/Search';
 import LanguageIcon from '@material-ui/icons/Language';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import { Avatar } from '@material-ui/core';
+// import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { Avatar, Button } from '@material-ui/core';
 import { Link } from 'react-router-dom'
 
 function Header() {
     return (
         <div className="header">
             <Link to='/'>
-                <img className="header__icon" src="/airbnb-logo.png" alt="" />
+                <img className="header__icon" src="\app-logo-main.png" alt="" />
             </Link>
+
             <div className="header__center">
                 <input type="text" />
                 <SearchIcon />
             </div>
 
             <div className="header__right">
-                <p>Become a host</p>
+                <Button>Become a host</Button>
                 <LanguageIcon />
-                <ExpandMoreIcon />
+                {/* <ExpandMoreIcon /> */}
                 <Avatar />
-
             </div>
-
-
         </div>
     )
 }

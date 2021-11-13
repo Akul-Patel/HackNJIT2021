@@ -12,7 +12,7 @@
 
 .header__icon {
     object-fit: contain;
-    height: 100px;
+    height: 30px;
     margin-left: 20px;
     
 }
@@ -23,7 +23,7 @@
     align-items: center;
     max-width: fit-content;
     padding: 10px;
-    height: 30px;
+    height: 15px;
     border: 1px solid lightgray;
     border-radius: 999px;
 }
@@ -39,6 +39,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 15vw;
-    margin-right: 80px;
+    width: 20vw;
+    margin-right: 20px;
 }
