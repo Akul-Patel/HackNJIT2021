@@ -25,7 +25,7 @@ function Banner() {
                 <h5>
                     Plan a different find of gateway to uncover the hidden gems near you.
                 </h5>
-                <Button onClick={() => history.push('/search')}
+                <Button onClick={() => history('/search')}
                     variant='outlined'>Explore Nearby</Button>
             </div>
         </div>
