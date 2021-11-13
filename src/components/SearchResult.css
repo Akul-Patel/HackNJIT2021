@@ -67,7 +67,5 @@
   }
 
 .searchResults__price {
-    position: absolute;
-    bottom: 20px;
-    right: 30px;
+    align-items: right;
 }

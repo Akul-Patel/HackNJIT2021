@@ -4,6 +4,11 @@ import { Button } from "@material-ui/core";
 import SearchResult from './SearchResult';
 
 function SearchPage() {
+    const img = [
+        "/img1.jpg",
+        "/img",
+        "src\static\images\img3.jpg"
+    ]
     return (
         <div className="searchPage">
             <div className="searchPage__info">
@@ -16,7 +21,9 @@ function SearchPage() {
                 <Button variant="outlined">More filters</Button>
             </div>
             <SearchResult
-                img="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ_wbPYTxQPMcBh7SPzLFActXnP3uhifeVT_g&usqp=CAU"
+                img = "/img1.jpg"
+                img2 = "/img2.jpg"
+                img3 = "/img3.jpg"
                 location="Private room in center of Bengaluru"
                 title="Stay at this spacious Edwardian House"
                 description="1 guest · 1 bedroom · 1 bed · 1.5 shared bthrooms · Wifi · Kitchen · Free parking · Washing Machine"
@@ -25,6 +32,39 @@ function SearchPage() {
                 total="₹20000 total"
             />
             <SearchResult
+                img = "/img1.jpg"
+                img2 = "/img2.jpg"
+                img3 = "/img3.jpg"
+                location="Private room in center of Bengaluru"
+                title="Stay at this spacious Edwardian House"
+                description="1 guest · 1 bedroom · 1 bed · 1.5 shared bthrooms · Wifi · Kitchen · Free parking · Washing Machine"
+                star={4.73}
+                price="₹10000 / night"
+                total="₹20000 total"
+            />
+            <SearchResult
+                img = "/img1.jpg"
+                img2 = "/img2.jpg"
+                img3 = "/img3.jpg"
+                location="Private room in center of Bengaluru"
+                title="Stay at this spacious Edwardian House"
+                description="1 guest · 1 bedroom · 1 bed · 1.5 shared bthrooms · Wifi · Kitchen · Free parking · Washing Machine"
+                star={4.73}
+                price="₹10000 / night"
+                total="₹20000 total"
+            />
+            <SearchResult
+                img = "/img1.jpg"
+                img2 = "/img2.jpg"
+                img3 = "/img3.jpg"
+                location="Certified by WildHoods"
+                title="Host: Sara Heston"
+                description="About Sara: Sara is experienced Vet for 25 years, she loves to be around animals."
+                star={4.73}
+                price="$37/ Night"
+                total="$ 270 total"
+            />
+            {/* <SearchResult
                 img="https://www.expatkings.com/wp-content/uploads/2018/10/Airbnb-rental-tips.-Hostmaker-1-620x349.jpg"
                 location="Private room in center of Bengaluru"
                 title="Independant luxury studio apartment"
@@ -78,7 +118,7 @@ function SearchPage() {
                 star={3.85}
                 price="₹100000 / night"
                 total="₹200000 total"
-            />
+            /> */}
         </div>
     )
 }
