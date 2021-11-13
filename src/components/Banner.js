@@ -25,8 +25,12 @@ function Banner() {
                     Dont' worry we are here.
                 </h3>
                 <br/>
-                <Button onClick={() => history('/Search')}
-                    variant="outlined">Explore Nearby Hosts</Button>
+                {showSearch ? 
+                    null :
+                    <Button onClick={() => history('/Search')}
+                    variant="outlined">Explore Nearby Hosts</Button> 
+                }
+                
             </div>
         </div>
     )
