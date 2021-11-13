@@ -5,8 +5,10 @@ import LanguageIcon from '@material-ui/icons/Language';
 // import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Avatar, Button } from '@material-ui/core';
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
 function Header() {
+    const history = useNavigate();
     return (
         <div className="header">
             <Link to='/'>
@@ -19,7 +21,7 @@ function Header() {
             </div>
 
             <div className="header__right">
-                <Button>Become a host</Button>
+                <Button onClick={() => history('/host-form')}>Become a host</Button>
                 <LanguageIcon />
                 {/* <ExpandMoreIcon /> */}
                 <Avatar />

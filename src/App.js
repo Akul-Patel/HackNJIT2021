@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import SearchPage from './components/SearchPage';
+import MyForm from './components/Host';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
@@ -20,6 +21,9 @@ function App() {
             
           </Route>
           <Route path="/" element={<Home/>}>
+            
+          </Route>
+          <Route path="/host-form" element={<MyForm/>}>
             
           </Route>
 
