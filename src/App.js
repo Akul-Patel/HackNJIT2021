@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { useState , useEffect } from "react";
 
 function App() {
+  const [deathToday, setDeathToday] = useState(null)
+  useEffect(() => {
+    fetch('/data')
+      .then(response => response.json())
+      .then(response => {
+        setDeathToday(response[1])
+        
+      })
+      .catch(error => {
+        console.log(error.message)
+      })
+  }, [])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <p>{deathToday}</p>
     </div>
   );
 }
