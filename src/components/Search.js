@@ -26,8 +26,10 @@ function Search() {
 
     return (
         <div className="search">
+            {/* <br/>
+            <br/> */}
             <DateRangePicker ranges={[selectionRange]} onChange={handleSelect} />
-            <h2>Number of Animal(s)<PetsIcon /></h2>
+            <h2>Number of Animal(s)  <PetsIcon /></h2>
             <input min={0} defaultValue={1} type="number" />
             <Button onClick={() => history('/search')}>Search WildHoods</Button>
         </div>
