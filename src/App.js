@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import SearchPage from './components/SearchPage';
 import MyForm from './components/Host';
+import Profile from './components/profile';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
@@ -25,6 +26,8 @@ function App() {
           </Route>
           <Route path="/host-form" element={<MyForm/>}>
             
+          </Route>
+          <Route path="/profile_button" element={<Profile/>}>
           </Route>
 
         </Routes>
