@@ -24,7 +24,7 @@ function Header() {
             </div>
 
             <div className="header__right">
-                <Button>Become a host</Button>
+                <Button onClick={() => history('/host-form')}>Become a host</Button>
                 <LanguageIcon />
                 {/* <ExpandMoreIcon /> */}
                 <Avatar />

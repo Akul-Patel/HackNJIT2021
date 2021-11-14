@@ -29,22 +29,22 @@ function Home() {
             </div>
             <div className='home__section'>
                 <Card
-                    src="https://media.nomadicmatt.com/2019/airbnb_breakup3.jpg"
-                    title="3 Bedroom Flat"
-                    description="Superhost with a stunning view of the beachside in Sunny Bournemouth"
+                    src="/img1.jpg"
+                    title="Sara Heston"
+                    description="Superhost with a years of experience in pet care."
                     price="$30/night"
                 />
                 <Card
-                    src="https://thespaces.com/wp-content/uploads/2017/08/Courtesy-of-Airbnb.jpg"
-                    title="Penthouse"
-                    description="Enjoy the amazing sights of London with this stunning penthouse"
-                    price="₹25000/night"
+                    src="/img4Home.jpg"
+                    title="Valerie Jackson"
+                    description="This super hosts enjoys company of Cats and Dogs."
+                    price="$75/night"
                 />
                 <Card
-                    src="https://media.nomadicmatt.com/2018/apartment.jpg"
-                    title="1 Bedroom apartment"
-                    description="Superhost with great amenities and a fabolous shopping complex nearby"
-                    price="₹6500/night"
+                    src="img5Home.jpg"
+                    title="Stephanie Knapp"
+                    description="Superhost with love for all animals."
+                    price="$100/night"
                 />
             </div>
         </div>
