@@ -1,0 +1,18 @@
+.login-logo {
+    /* Adjust location on screen */
+    z-index: 9;
+    padding: 0px 20px;
+    padding-bottom: 5px;
+    margin-top: -340px;
+    margin-left: -160px;
+
+    /* Style */
+    background-color: rgb(30, 158, 30);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.438);
+    border: 1px solid black;
+    border-radius: 12px;
+    font-size: xx-large;
+    font-weight: 600;
+    color: white;
+    
+}

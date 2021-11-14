@@ -12,17 +12,17 @@ function Home() {
 
             <div className="home__section">
                 <Card
-                    src="https://a0.muscache.com/im/pictures/eb9c7c6a-ee33-414a-b1ba-14e8860d59b3.jpg?im_w=720"
+                    src="c6c1882a1cd83a05830b7b5af1f77c96.jpg"
                     title="New Experiences"
                     description="Unique activities your pet can experience, led by a world of hosts."
                 />
                 <Card
-                    src="https://a0.muscache.com/im/pictures/15159c9c-9cf1-400e-b809-4e13f286fa38.jpg?im_w=720"
+                    src="Bird-room-Credit-Lise-Durocher-small-e1429120465752.jpg"
                     title="Unique stays"
                     description="Spaces that are more than just a place to stay for your pet."
                 />
                 <Card
-                    src="https://a0.muscache.com/im/pictures/fdb46962-10c1-45fc-a228-d0b055411448.jpg?im_w=720"
+                    src="Pet-Friendly-Home-Decor-Tips-4.jpeg"
                     title="Safe Place"
                     description="Safer, Comfortable, and private place for pets, with our range of experienced hosts."
                 />
@@ -41,8 +41,8 @@ function Home() {
                     price="$75/night"
                 />
                 <Card
-                    src="img5Home.jpg"
-                    title="Stephanie Knapp"
+                    src="parrots_111013_1.jpg"
+                    title="Stephen Curry"
                     description="Superhost with love for all animals."
                     price="$100/night"
                 />
