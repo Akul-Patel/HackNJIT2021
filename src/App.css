@@ -23,6 +23,15 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+#para-form{
+  
+  height: 90%;
+  width: 96%;
+  background: #eee;
+  margin: 10px auto;
+}
+
+
 
 .App-link {
   color: #61dafb;
