@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import AuthNav from './auth-nav';
 
 
+
 function Header() {
     const history = useNavigate();
     return (
@@ -27,14 +28,16 @@ function Header() {
                 <Button onClick={() => history('/host-form')}>Become a host</Button>
                 <LanguageIcon />
                 {/* <ExpandMoreIcon /> */}
-                <Avatar />
+                
             
             </div>
+            
             <div className="nav-container mb-3">
                 <nav className="navbar navbar-expand-md navbar-light bg-light">
                     <div className="container">
                         <div className="navbar-brand logo" />
                             <AuthNav />
+
                     </div>
                 </nav>
             </div>

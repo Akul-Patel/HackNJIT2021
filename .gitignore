@@ -24,11 +24,6 @@ yarn-debug.log*
 yarn-error.log*
 
 package-lock.json
-<<<<<<< HEAD
+
 package.json
-=======
-<<<<<<< HEAD
-=======
-package.json
->>>>>>> d654bdbd8978651e956e401cf8d065571da3f26c
->>>>>>> 1085c6bca06e34276a8dfb1f34a60316d6da8be8
+

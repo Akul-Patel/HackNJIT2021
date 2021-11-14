@@ -1,10 +1,12 @@
 import React, {useEffect, useRef} from 'react';
 import { ConversationalForm } from 'conversational-form';
 import './Host.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function MyForm() {
   let cf = null;
   const ref = useRef(null);
+  const history = useNavigate();
   const formFields = [
     {
         'tag': 'input',
@@ -70,11 +72,16 @@ export default function MyForm() {
       cf.remove();
     };
   }, []);
-
-  function submitCallback() {
+  const sleep = (milliseconds) => {
+    return new Promise(resolve => setTimeout(resolve, milliseconds))
+  }
+  async function submitCallback() {
     var formDataSerialized = cf.getFormData(true);
-    console.log("Formdata, obj:", formDataSerialized);
-    cf.addRobotChatResponse("You are done. Check the dev console for form data output.")
+    console.log("Formdata, obj:", formDataSerialized);;
+    cf.addRobotChatResponse("You are done. We will reach back to you after taking your information in consideration.");
+    await sleep(5000);
+    history('/')
+
   }
 
   return (
