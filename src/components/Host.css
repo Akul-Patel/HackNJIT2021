@@ -1,10 +1,11 @@
-.form-element {
-    padding: top 200px;;
-}
 
-html, body {
-    height: 90%;
-    width: 96%;
-    background: #eee;
-    margin: 10px auto;
-  }
+
+.form {
+    
+    
+        height: 90%;
+        width: 96%;
+        background: black;
+        margin: 10px auto;
+    
+}
