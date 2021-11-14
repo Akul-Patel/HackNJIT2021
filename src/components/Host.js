@@ -1,53 +1,65 @@
-import React, {useEffect, useRef} from 'react';
+import React from 'react';
 import { ConversationalForm } from 'conversational-form';
-import styles from "./Host.css";
+import './Host.css';
 
-export default function MyForm() {
-  let cf = null;
-  const ref = useRef(null);
-  const formFields = [
-    {
-      'tag': 'input',
-      'type': 'text',
-      'name': 'firstname',
-      'cf-questions': 'What is your firstname?'
-    },
-    {
-      'tag': 'input',
-      'type': 'text',
-      'name': 'lastname',
-      'cf-questions': 'What is your lastname?'
-    }
-  ];
-
-  useEffect(function mount() {
-    cf = ConversationalForm.startTheConversation({
-      options: {
-        theme: 'blue',
-        submitCallback: submitCallback,
-        preventAutoFocus: true,
-        //loadExternalStyleSheet: true
-        
+export default class MyForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.formFields = [
+      {
+        'tag': 'input',
+        'type': 'text',
+        'name': 'firstname',
+        'cf-questions': 'What is your firstname?'
       },
-      tags: formFields,
-    }).conver;
-
-    ref.current.appendChild(cf.el);
-
-    return function unMount(){
-      cf.remove();
-    };
-  }, []);
-
-  function submitCallback() {
-    var formDataSerialized = cf.getFormData(true);
-    console.log("Formdata, obj:", formDataSerialized);
-    cf.addRobotChatResponse("You are done. Check the dev console for form data output.")
+      {
+        'tag': 'input',
+        'type': 'text',
+        'name': 'lastname',
+        'cf-questions': 'What is your lastname?'
+      },
+      {
+        'tag': 'input',
+        'type': 'text',
+        'name': 'email',
+        'cf-questions': 'What is your email?'
+      },
+      {
+        'tag': 'input',
+        'type': 'file',
+        'name': 'Certification',
+        'cf-questions': 'please upload your picture.'
+      }
+    ];
+    
+    this.submitCallback = this.submitCallback.bind(this);
   }
-
-  return (
-    <div  className={styles.form}>
-      <div ref={ref} />
-    </div>
-  );
+  
+  componentDidMount() {
+    this.cf = ConversationalForm.startTheConversation({
+      options: {
+        submitCallback: this.submitCallback,
+        preventAutoFocus: true,
+        // loadExternalStyleSheet: false
+      },    
+      tags: this.formFields
+    });
+    this.elem.appendChild(this.cf.el);
+  }
+  
+  submitCallback() {
+    var formDataSerialized = this.cf.getFormData(true);
+    console.log("Formdata, obj:", formDataSerialized);
+    this.cf.addRobotChatResponse("You are done. Check the dev console for form data output.")
+  }
+  
+  render() {
+    return (
+      <div className="form-element">
+        <div
+          ref={ref => this.elem = ref}
+        />
+      </div>
+    );
+  }
 }
