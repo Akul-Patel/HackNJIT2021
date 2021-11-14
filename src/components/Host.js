@@ -1,12 +1,14 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import { ConversationalForm } from 'conversational-form';
 import './Host.css';
+import { useNavigate } from 'react-router-dom';
 
-export default class MyForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.formFields = [
-      {
+export default function MyForm() {
+  let cf = null;
+  const ref = useRef(null);
+  const history = useNavigate();
+  const formFields = [
+    {
         'tag': 'input',
         'type': 'text',
         'name': 'firstname',
@@ -28,38 +30,63 @@ export default class MyForm extends React.Component {
         'tag': 'input',
         'type': 'file',
         'name': 'Certification',
-        'cf-questions': 'please upload your picture.'
+        'cf-questions': 'Please upload any certification you have.'
+      },
+      {
+        'tag': 'input',
+        'type': 'file',
+        'name': 'photo',
+        'cf-questions': 'Please upload your photo.'
+      },
+      {
+        'tag': 'input',
+        'type': 'radio',
+        'name': 'pets',
+        'cf-questions': 'Do you have any pets?',
+        'cf-label':'no',
+        'value':'No'
+      },
+      {
+        'tag': 'input',
+        'type': 'radio',
+        'name': 'pets',
+        'cf-label':'yes',
+        'value':'Yes'
       }
-    ];
-    
-    this.submitCallback = this.submitCallback.bind(this);
-  }
-  
-  componentDidMount() {
-    this.cf = ConversationalForm.startTheConversation({
+  ];
+
+  useEffect(function mount() {
+    cf = ConversationalForm.startTheConversation({
       options: {
-        submitCallback: this.submitCallback,
+        theme: 'blue',
+        submitCallback: submitCallback,
         preventAutoFocus: true,
         // loadExternalStyleSheet: false
-      },    
-      tags: this.formFields
+      },
+      tags: formFields,
     });
-    this.elem.appendChild(this.cf.el);
+
+    ref.current.appendChild(cf.el);
+
+    return function unMount(){
+      cf.remove();
+    };
+  }, []);
+  const sleep = (milliseconds) => {
+    return new Promise(resolve => setTimeout(resolve, milliseconds))
   }
-  
-  submitCallback() {
-    var formDataSerialized = this.cf.getFormData(true);
-    console.log("Formdata, obj:", formDataSerialized);
-    this.cf.addRobotChatResponse("You are done. Check the dev console for form data output.")
+  async function submitCallback() {
+    var formDataSerialized = cf.getFormData(true);
+    console.log("Formdata, obj:", formDataSerialized);;
+    cf.addRobotChatResponse("You are done. We will reach back to you after taking your information in consideration.");
+    await sleep(5000);
+    history('/')
+
   }
-  
-  render() {
-    return (
-      <div className="form-element">
-        <div
-          ref={ref => this.elem = ref}
-        />
-      </div>
-    );
-  }
+
+  return (
+    <div className="form-element">
+      <div ref={ref} />
+    </div>
+  );
 }

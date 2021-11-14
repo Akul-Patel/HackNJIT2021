@@ -1,8 +1,8 @@
 .search {
     position: absolute;
-    top: 35px;
+    top: 12vh;
     left: 25%;
-    width: 100vw;
+    width: 10vw;
 }
 
 .search > h2 {
@@ -14,7 +14,7 @@
     background-color: white;
     position: absolute;
     left: 0;
-    top: 345px;
+    top: 315px;
 }
 
 .search > input {
@@ -23,7 +23,7 @@
     position: absolute;
     left: 0;
     height: 30px;
-    top: 395px;
+    top: 375px;
     border: none;
   }
   
@@ -34,7 +34,7 @@
 .search > button {
     position: absolute;
     left: 0;
-    top: 465px;
+    top: 430px;
     text-transform: inherit !important;
     background-color: #446cb4;
     color: white;
